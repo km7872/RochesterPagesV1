@@ -1,0 +1,25 @@
+﻿@page
+@model RochesterPagesV1.Pages.DirectoryModel
+@{
+    ViewData["Title"] = "Directory";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Adress</th>
+            <th>Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.directories)
+        {
+            <tr>
+                <td>@item.name</td>
+                <td>@item.address</td>
+                <td>@item.number</td>
+            </tr>
+        }
+    </tbody>
+</table>

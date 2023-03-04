@@ -1,0 +1,20 @@
+﻿@page
+@model RochesterPagesV1.Pages.UpcomingModel
+@{
+    ViewData["Title"] = "Upcoming features";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>This website is part of the phase 1 design: allowing users to add places and search the same</p>
+<p>
+    Phase 2:
+    Allow users to sign up/ login (including google logins).
+    Allow users to mention tags for each place they add.
+    Once a form is submitted it would need to go through the approval process. Once the data is verified by a trusted source( for eg: a college official in the Center for Campus Life, RIT) the data would become available in the DB
+
+</p>
+<p>Phase 3:
+    Security / Accessibility - certain users will be allowed to import data into the database - This could be the admin or someone from the development team. The idea is that there are a lot of different repositories from where we can pull the data, clean it and store it in our database to make it more detailed.
+    Allow users to rate a place and add comments on a place ->could be a general experience- this is a great place for buying winter boots or these stores give student discounts-something like that.
+    Work on performance for the search query –as data increases so will the search time - need to carefully consider indexes or look at query performance.
+    </p>

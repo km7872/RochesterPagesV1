@@ -1,0 +1,47 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Rochester Pages";
+}
+
+<form method="post">
+    <div class="text-center">
+        <h1 class="display-4">Welcome to Rochester Pages</h1>
+        <p>Your one-stop to everything local!</p>
+        <input type="text" class="form-control-sm" name="lookup" size="50" value="@Model.lookup" /> <button type="submit" class="btn-outline-primary">&#128269;</button>
+    </div>
+</form>
+
+<br/>
+
+
+@if (Model.directories.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Adress</th>
+                <th>Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.directories)
+            {
+                <tr>
+                    <td>@item.name</td>
+                    <td>@item.address</td>
+                    <td>@item.number</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@if (Model.errorMessage.Length > 0)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>@Model.errorMessage</strong>
+        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label="Close"></button>
+    </div>
+}
